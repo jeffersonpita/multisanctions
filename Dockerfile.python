@@ -1,0 +1,7 @@
+FROM nickgryg/alpine-pandas
+RUN pip3 install pymongo && \
+    pip3 install wget
+
+ADD sanctions.py /
+COPY sanctions.py ./sanctions.py
+CMD [ "python", "./sanctions.py" ]

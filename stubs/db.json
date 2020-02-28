@@ -1,0 +1,47 @@
+{
+  "status": {
+    "up": true
+  },
+  "search": [
+    {
+      "name": "Robert Gabriel Mugabe",
+      "sanctioned": true,
+      "relevance": 1
+    },
+    {
+      "name": "Abou Ali",
+      "sanctioned": true,
+      "relevance": 1
+    },
+    {
+      "name": "οργάνωση Al-Qaida στην Αραβική Χερσόνησο",
+      "sanctioned": true,
+      "relevance": 1
+    },
+    {
+      "name": "Université Malek Ashtar",
+      "sanctioned": true,
+      "relevance": 1
+    },
+    {
+      "name": "Iran Modern Devices",
+      "sanctioned": true,
+      "relevance": 0.9
+    },
+    {
+      "name": "Pop Credit Bank",
+      "sanctioned": true,
+      "relevance": 0.9
+    },
+    {
+      "name": "Bank of Syria",
+      "sanctioned": true,
+      "relevance": 0.9
+    },
+    {
+      "name": "KCST",
+      "sanctioned": true,
+      "relevance": 1
+    }
+  ]
+}

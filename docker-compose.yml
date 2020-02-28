@@ -1,0 +1,45 @@
+version: '3.4'
+
+
+services:
+  mongo:
+     container_name: mongo
+     image: mongo
+     command: mongod --port 27018
+     volumes:
+       - ./data:/data/db
+     ports:
+       - 27018:27018
+     restart: always
+
+  api:
+   build:
+     context: .
+     dockerfile: Dockerfile
+   ports:
+   - "8080:8080"
+   depends_on:
+   - mongo
+   volumes:
+    - ./stubs:/stubs
+
+  python:
+     build:
+       context: .
+       dockerfile: Dockerfile.python
+     ports:
+     - "8000:8000"
+     depends_on:
+     - mongo
+     restart: always
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    links:
+      - api
+    environment:
+      - API=api:8080
+    command:
+      - ./smoke-test.sh

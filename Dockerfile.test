@@ -1,0 +1,7 @@
+FROM alpine
+
+RUN apk add --no-cache curl jq
+WORKDIR /test
+COPY ./test /test
+
+ENTRYPOINT ["ash", "-c"]
